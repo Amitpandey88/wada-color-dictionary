@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-washi: #fcfaf6;
+    --paper-border: #e9e3d5;
+    --ink-black: #201d1a;
+    --ink-muted: #746e65;
+    --seal-red: #c93b3b;
+  }
+
+  body {
+    background-color: var(--bg-washi);
+    color: var(--ink-black);
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Authentic Japanese Washi subtle grain texture */
+.washi-grain {
+  background-image: radial-gradient(rgba(32, 29, 26, 0.035) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.dark .washi-grain {
+  background-image: radial-gradient(rgba(240, 235, 225, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Stitched seam effect reminiscent of cloth color books */
+.stitched-border {
+  border: 1px dashed rgba(0, 0, 0, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.dark .stitched-border {
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+/* Traditional Hanko stamp red seal */
+.hanko-seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #cb3550;
+  color: #cb3550;
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 700;
+  border-radius: 4px;
+  position: relative;
+  text-shadow: 0 0 1px rgba(203, 53, 80, 0.3);
+  box-shadow: 0 0 0 1px rgba(203, 53, 80, 0.15);
+}
+
+/* Vertical Japanese text */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.15em;
+}
+
+/* Custom crisp scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d8d0c2;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #383430;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b5ac9d;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #504b46;
+}
